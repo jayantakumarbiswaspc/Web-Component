@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+input[type="radio"]{
+    display: none;
+}
+label{
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    color: white;
+    background: #0076ff;
+}
+.accordion:last-child > label, .accordion:last-child > .accordion-content {
+    border: none;
+}
+.accordion-content{
+    border-bottom: 1px solid black;
+    padding: 15px;
+    display: none;
+}
+input:checked ~ .accordion-content{
+    display: block;
+}
+
+
