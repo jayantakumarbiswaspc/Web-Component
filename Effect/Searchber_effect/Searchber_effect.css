@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+}
+header .search{
+    height: 80%;
+    width: 2%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+#checkbox:checked ~ .search{
+    width: 30%;
+}
+#checkbox:checked ~ .search input{
+    padding-right: 70px;
+
+}
+
+
+.search input{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-size: 1.1rem;
+    /* background: transparent; */
+}
+.search .icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#checkbox:checked ~ .search .icon{
+    width: 60px;
+    border-radius: 0 10px 10px 0;
+
+}
+
+#checkbox{
+    display: none;
+}
+.search input::-webkit-search-cancel-button{
+    /* position: relative; */
+    /* -webkit-appearance: none; */
+    /* padding-left: 10px; */
+    font-size: 40px;
+    margin-left: 10px;
+    /* margin-right: 25px; */
+    height: 40px;
+    width: 40px;
+    background-color: red;
+}
